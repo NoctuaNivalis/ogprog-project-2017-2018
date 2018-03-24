@@ -28,7 +28,7 @@ Het vak "Objectgericht programmeren" van professor Kris Coolsaet (id 1) aan de e
 | 1          | 1          | 2           | Objectgericht programmeren | 4   | 1           | 2        |
 
 
-SQLite databanken worden opgeslagen in een gewone file. Je mag ervan uitgaan dat deze file altijd dezelfde naam zal hebben en altijd in het hoofd package van je project zal staan.
+SQLite databanken worden opgeslagen in een gewone file. Je mag ervan uitgaan dat deze file altijd dezelfde naam zal hebben en altijd in het hoofd package van je project zal staan. Bij het indienen van deel 1 zal dit `lectures.db` in de map `timetable` zijn, dus "naast" `Main.java`.
 
 ## Deel 1: Lessenrooster weergeven
 
@@ -77,7 +77,7 @@ Om in te dienen, maak je een zip bestand van de src-map van je project. Deze map
 - Klik in het menu op "reveal in Finder" of "reveal in Explorer"
 - De src-map van het project zou nu zichtbaar moeten zijn
 
-**Opmerking** Gelieve de "hoofdklasse" (degene die de main methode bevat) van je project `Main` te noemen en deze in de package `timetable` te plaatsen. Als deze momenteel een andere naam en plaats heeft, kan je met behulp van de IntelliJ rename en refactor tools deze eenvoudig aanpassen.
+**Opmerking** Gelieve de "hoofdklasse" (degene die de main methode bevat) van je project `Main` te noemen en deze in de package `timetable` te plaatsen. Als deze momenteel een andere naam en plaats heeft, kan je met behulp van de IntelliJ rename en refactor tools deze eenvoudig aanpassen. Het databestand is `lectures.db`, ook in de map `timetable`.
 
 Bij het indienen op Indianio wordt je code automatisch gecompileerd. Het resultaat van de compilatie is zichtbaar voor jullie, dus als de compilatie niet slaagt, dan verwachten we dat je het probleem oplost en opnieuw probeert in te dienen tot alles correct compileert. Wacht dus niet met indienen tot 5 minuten voor de deadline.
 
