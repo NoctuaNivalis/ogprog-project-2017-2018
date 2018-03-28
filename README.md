@@ -2,12 +2,14 @@
 
 Een groot deel van de evaluatie voor het vak Objectgericht Programmeren wordt toegekend aan een programmeerproject (8 van de 20 punten). Hoewel iedereen dezelfde opgave krijgt, word je toch verondersteld deze opgave **individueel** op te lossen. Het delen van code zal bij alle partijen betraft worden.
 
-We voorzien de volgende (voorlopige) planning
+We voorzien de volgende planning
 
-- 14 maart: Opgave deel 1
-- 28 maart: Opgave deel 2
-- 8 april: Afgave deel 1
-- 6 mei: Afgave deel 2
+- **woensdag 14 maart**: Het eerste deel van de projectopgave wordt besproken in de oefeningenles.
+- **woensdag 28 maart**: Het tweede deel van de projectopgave wordt besproken in de oefeningenles.
+- **zondag 8 april**: Uiterste indiendatum van het eerste deel van het project.
+- **zondag 6 mei**: Uiterste indiendatum van het tweede deel van het project.
+- Inhaalweek: peer review
+- Later kan je eventueel nog uitgenodigd worden voor een mondelinge verdediging.
 
 ## Inleiding
 
@@ -22,13 +24,13 @@ De tabel `lecture` is de belangrijkste en bevat voor ieder vak de tijdstippen wa
 Het vak "Objectgericht programmeren" van professor Kris Coolsaet (id 1) aan de eerste bachelor informatica (id 1) wordt bijvoorbeeld gegeven op woensdag van 11u30 tot 13u in auditorium A2 (id 3), op woensdag van 14u30 tot 17u30 in PC-zaal Hopper (id 5) en op donderdag van 8u30 tot 10u in auditorium A2 (id 3). Dat betekent dat de databank volgende entries zal bevatten.
 
 | students_id | teacher_id | location_id | course                     | day | first_block | duration |
-| ---------- | ---------- | ----------- | -------------------------- | --- | ----------- | -------- |
-| 1          | 1          | 2           | Objectgericht programmeren | 3   | 3           | 1        |
-| 1          | 1          | 5           | Objectgericht programmeren | 3   | 5           | 2        |
-| 1          | 1          | 2           | Objectgericht programmeren | 4   | 1           | 2        |
+| ----------- | ---------- | ----------- | -------------------------- | --- | ----------- | -------- |
+| 1           | 1          | 2           | Objectgericht programmeren | 3   | 3           | 1        |
+| 1           | 1          | 5           | Objectgericht programmeren | 3   | 5           | 2        |
+| 1           | 1          | 2           | Objectgericht programmeren | 4   | 1           | 2        |
 
 
-SQLite databanken worden opgeslagen in een gewone file. Je mag ervan uitgaan dat deze file altijd dezelfde naam zal hebben en altijd in het hoofd package van je project zal staan. Bij het indienen van deel 1 zal dit `lectures.db` in de map `timetable` zijn, dus "naast" `Main.java`.
+SQLite databanken worden opgeslagen in een gewone file. Je mag ervan uitgaan in deel 1 dat deze file altijd dezelfde naam zal hebben en altijd in het hoofd package van je project zal staan (op indianio maken wij `src/timetable/lectures.db` aan, dus naast `Main.java`).
 
 ## Deel 1: Lessenrooster weergeven
 
@@ -61,9 +63,33 @@ Voor het nemen van een screenshot van een bepaalde *scene* of *node* kan je de i
 
 In alle andere gevallen moet er een gepaste foutboodschap uitgeschreven worden.
 
-### Indienen en specificaties
+## Deel 2: Lessenrooster opstellen
 
-Het eerste deel moet ten laatste ingedien worden op **8 april** via [Indianio](https://www.indianio.ugent.be). Hou hierbij rekening met onderstaande opmerkingen:
+Voor het tweede deel van de opgave voeg je functionaliteit aan je applicatie toe die het mogelijk maakt om lessenroosters op te stellen. We verwachten dat minstens de volgende functionaliteit aanwezig is:
+
+- Openen van een bestaand databankbestand (extensie `.db`)
+- Creëren van een nieuw, initiëel leeg lessenrooster
+- Toevoegen van lesgevers, studentengroepen en leszalen
+- Toevoegen van een les (entry in tabel `lecture`)
+- Aanpassen namen van lesgevers, studentengroepen en leszalen
+- Wijzigen van een les
+- Verwijderen van een les
+
+Bij het creëren van een nieuw lessenrooster moet de gebruiker de starttijden van de lesblokken kunnen ingeven (tabel `period`). De mogelijkheid om lesgevers, studentengroepen en leszalen te verwijderen moet niet verplicht voorzien worden. Als je dit wel zou willen doen, denk dan goed na over wat er moet gebeuren met de lessen van die lesgevers, studentengroepen en leszalen. Gebruik **verplicht** een DAO-structuur voor alle databanktoegangen!
+
+De manier waarop bovenstaande acties uitgevoerd kunnen worden mag je zelf kiezen, maar zorg ervoor dat dit op een **gebruikersvriendelijke en intuïtieve** manier kan gebeuren. Als je ervoor zou kiezen om functionaliteit te implementeren die niet direct zichtbaar is in je applicatie of als het niet direct duidelijk is welke acties uitgevoerd moeten worden voor bepaalde functionaliteit, neem je die op in een Help-venster.
+
+Hou rekening met lastige gebruikers. Ga er vanuit dat jouw feedback-peers op alle legale manieren jouw programma zullen aanvallen. Als iemand, bij wijze van voorbeeld, twee lesgevers met dezelfde naam toevoegt, mag jouw programma niet crashen, maar moet het een vriendelijke waarschuwing tonen.
+
+Als je tijd over hebt en je code al perfect is volgens jou, kan je mogelijks extra punten verdienen met bijkomende features. Belangrijk hierbij is wel dat wiens verplichte functionaliteit ontbreekt, geen punten kan krijgen voor extra's. Jouw code nog eens nakijken en herschrijven kan ook een stuk meer punten opleveren. Als je toch extra functionaliteit toevoegt, neem deze dan zeker op in een Help-venster zodat diegene die je applicatie test weet dat ze bestaat.
+
+### Programma-aanroep
+
+In het tweede deel hoef je geen speciale aanroep-methoden te voorzien.
+
+## Indienen en specificaties
+
+Het eerste deel moet ten laatste ingedien worden op **8 april** via [Indianio](https://www.indianio.ugent.be). Het tweede deel moet ten laatste ingediend worden op **6 mei**, tevens via Indianio. Hou hierbij rekening met onderstaande opmerkingen:
 
 - Werk verplicht met een packagestructuur.
 - Test grondig of de versie die je wil indienen voldoet aan alle opgelegde specificaties.
@@ -83,6 +109,10 @@ Bij het indienen op Indianio wordt je code automatisch gecompileerd. Het resulta
 
 Bij het maken van het vervolg van de opgave is het uiteraard toegelaten om nog wijzigingen aan te brengen aan de klassen die je reeds hebt ingediend. Hou er wel rekening mee dat het eerste deel afzonderlijk zal gequoteerd worden en dat het dus belangrijk is dat alles dan al naar behoren functioneert.
 
+## Peer reviews
+
+Tijdens de inhaalweek krijg je enkele uitvoerbare versies van de andere deelnemers. Je schrijft een beoordeling over het project, met een focus aanwezige/ontbrekende functionaliteit en de algemene bruikbaarheid van het project. Meer informatie volgt bij het uitdelen van de projecten.
+
 ## Beoordeling
 
 We hanteren onder andere onderstaande criteria bij de beoordeling van het project:
@@ -96,3 +126,14 @@ We hanteren onder andere onderstaande criteria bij de beoordeling van het projec
 - Programmeer steeds met efficiëntie in het achterhoofd.
 - Programmeer helder en met stijl, gebruik voldoende klassen en methodes (in plaats van knip- en plakwerk), ...
 - Indien dit nodig zou blijken, kan je gevraagd worden om je project te komen toelichten. 
+
+## FAQ
+
+### Kan ik online gevonden code/bibliotheken gebruiken in mijn project?
+
+Hangt af van het doel van de code/bibliotheek. We bepalen dit op individuele basis, dus contacteer ons via mail or tijdens een practicum.
+
+### De hoogte van mijn klassen is steeds 0, waar vind ik de echte grootte?
+
+De grootte van JavaFX Pane's wordt pas ingesteld na het renderen ervan. Als je getHeight aanroept tijdens de constructor, zal deze dus nog niet ingesteld zijn. Luister in in plaats daarvan naar de heightProperty om te weten wanneer de hoogte dan wel ingesteld wordt.
+
