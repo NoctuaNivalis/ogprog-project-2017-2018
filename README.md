@@ -69,7 +69,7 @@ Voor het tweede deel van de opgave voeg je functionaliteit aan je applicatie toe
 
 - Openen van een bestaand databankbestand (extensie `.db`)
 - Creëren van een nieuw, initiëel leeg lessenrooster
-- Toevoegen van lesgevers, studentengroepen en leszalen
+- Toevoegen van lesgevers, studentengroepen en leszalen (de ID's in het nieuwe databankschema incrementeren)
 - Toevoegen van een les (entry in tabel `lecture`)
 - Aanpassen namen van lesgevers, studentengroepen en leszalen
 - Wijzigen van een les
