@@ -137,3 +137,7 @@ Hangt af van het doel van de code/bibliotheek. We bepalen dit op individuele bas
 
 De grootte van JavaFX Pane's wordt pas ingesteld na het renderen ervan. Als je getHeight aanroept tijdens de constructor, zal deze dus nog niet ingesteld zijn. Luister in in plaats daarvan naar de heightProperty om te weten wanneer de hoogte dan wel ingesteld wordt.
 
+### De jar op indianio vindt de databank niet terug, terwijl lokaal alles werkt?
+
+Waarschijnlijk spreek je de databank aan relatief ten opzichte van de huidige map (`"jdbc:sqlite:src/timetable/lectures.db"`). Om bestanden aan te spreken in de jar moet je naar het *classpath* kijken. De relevante uitleg vindt je in sectie 6.1 (Drivers en verbindingen) in het handboek.
+
